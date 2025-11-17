@@ -1,0 +1,257 @@
+/* --------------------------------------------- */
+/* IMPORTED FONTS */
+/* --------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* --------------------------------------------- */
+/* ROOT VARIABLES */
+/* --------------------------------------------- */
+:root {
+    --ff-heading: "Playfair Display", serif;
+    --ff-body: "Playfair Display", serif;
+
+    /* COLOR PALETTE */
+    --midnight-blue: #1F2A44;
+    --olive-green: #76885B;
+    --champagne-gold: #E5C185;
+    --linen: #F8F4EC;
+    --dark-charcoal: #2B2B2B;
+    --soft-white: #FAF9F6;
+
+    --border-width: 3px;
+    --max-width: 1100px;
+
+    --space-s: 0.75rem;
+    --space-m: 1.25rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
+}
+
+/* --------------------------------------------- */
+/* GLOBAL */
+/* --------------------------------------------- */
+body {
+    background: var(--soft-white);
+    font-family: var(--ff-body);
+    color: var(--dark-charcoal);
+    line-height: 1.65;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--ff-heading);
+    color: var(--midnight-blue);
+    font-weight: 600;
+}
+
+section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-m);
+}
+
+/* --------------------------------------------- */
+/* HEADER HERO */
+/* --------------------------------------------- */
+.header {
+    background: var(--midnight-blue);
+    padding: var(--space-xl) 0 var(--space-l);
+    text-align: center;
+    color: var(--champagne-gold);
+}
+
+.header img {
+    height: 160px;
+    display: block;
+    margin: 0 auto var(--space-m);
+}
+
+.header-title {
+    font-size: 3rem;
+    color: var(--soft-white);
+    margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--champagne-gold);
+}
+
+/* --------------------------------------------- */
+/* NAVIGATION BAR */
+/* --------------------------------------------- */
+nav {
+    background: var(--champagne-gold);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: var(--ff-heading);
+    color: var(--dark-charcoal);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* --------------------------------------------- */
+/* WELCOME SECTION */
+/* --------------------------------------------- */
+.welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.welcome p {
+    max-width: 900px;
+}
+
+/* --------------------------------------------- */
+/* OFFERINGS SECTION */
+/* --------------------------------------------- */
+.offerings h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Two-card row */
+.offerings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-l);
+    margin-bottom: var(--space-l);
+}
+
+.card {
+    background: var(--linen);
+    padding: var(--space-l);
+    border-radius: 10px;
+    border: var(--border-width) solid var(--olive-green);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--midnight-blue);
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+/* Large green box */
+.offerings-wide {
+    background: var(--olive-green);
+    color: white;
+    padding: var(--space-l);
+    border-radius: 10px;
+    border: var(--border-width) solid var(--olive-green);
+}
+
+.offerings-wide h3 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* --------------------------------------------- */
+/* GALLERY SECTION */
+/* --------------------------------------------- */
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery-card {
+    background: var(--linen);
+    border-radius: 10px;
+    border: var(--border-width) solid var(--champagne-gold);
+    width: 165px;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.gallery-card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.gallery-card p {
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.gallery-button-wrap {
+    text-align: center;
+    margin-top: var(--space-l);
+}
+
+.gallery-button {
+    background: var(--olive-green);
+    border: var(--border-width) solid var(--olive-green);
+    color: white;
+    font-family: var(--ff-heading);
+    padding: 0.75rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* --------------------------------------------- */
+/* FOOTER */
+/* --------------------------------------------- */
+footer {
+    background: var(--midnight-blue);
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--champagne-gold);
+}
+
+footer a {
+    color: var(--champagne-gold);
+    text-decoration: none;
+}
+
+/* --------------------------------------------- */
+/* RESPONSIVE STYLES */
+/* --------------------------------------------- */
+
+/* 900px */
+@media (max-width: 900px) {
+    nav {
+        gap: 3rem;
+    }
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 2.3rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .gallery-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
